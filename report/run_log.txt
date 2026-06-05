@@ -1,0 +1,287 @@
+Loading embedding model…
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 13771.56it/s]
+Loaded 3 knowledge file(s): ['it_support.txt', 'knowledge.txt', 'student_handbook.txt']
+Created 4 chunk(s).
+
+FAISS index ready, 4 vectors, dim=768
+
+
+================================================================================
+BATCH RUN – Q1 through Q5
+================================================================================
+
+================================================================================
+Q1: When is IT support available?
+
+Top 4 retrieved chunks:
+  [1] source=it_support.txt | chunk_id=0 | score=0.3498
+       If your university account password is forgotten, use the password reset portal. IT support is available Monda…
+  [2] source=student_handbook.txt | chunk_id=0 | score=0.2825
+       Course registration is open during the first two weeks of the semester. Students may retake failed exams once.…
+  [3] source=knowledge.txt | chunk_id=1 | score=0.0715
+       It covers more than 30% of the planet’s surface.…
+  [4] source=knowledge.txt | chunk_id=0 | score=-0.0111
+       Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of…
+
+── Constructed prompt ──────────────────────────────────────────────────────
+You are a helpful assistant answering questions using only the provided context.
+
+Rules:
+1. Use only the information from the context.
+2. If the answer is not in the context, say: "There is no information available in the provided context."
+3. Keep the answer clear and concise.
+4. Mention the source file when possible.
+
+Context:
+[Source 1: it_support.txt, chunk 0]
+If your university account password is forgotten, use the password reset portal. IT support is available Monday to Friday from 09:00 to 18:00. Students should report hardware issues using the online support system. Software installation requests require administrator approval.
+
+[Source 2: student_handbook.txt, chunk 0]
+Course registration is open during the first two weeks of the semester. Students may retake failed exams once. The university library is open from 08:00 until 22:00 every day. Final grades are published in the student portal.
+
+[Source 3: knowledge.txt, chunk 1]
+It covers more than 30% of the planet’s surface.
+
+[Source 4: knowledge.txt, chunk 0]
+Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of water a day is essential for survival, and lightning never strikes the same place twice. Mount Everest is the tallest mountain on Earth. Its peak is 8848 meters above sea level and it is part of the Himalayas. The Amazon rainforest is the largest tropical rainforest in the world. It spans multiple countries in South America and contains immense biodiversity. The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the planet’s surface.
+
+Question:
+When is IT support available?
+
+Answer:
+────────────────────────────────────────────────────────────────────────────
+
+LLM Answer (llama-3.3-70b-versatile):
+IT support is available Monday to Friday from 09:00 to 18:00, as stated in the it_support.txt file.
+
+
+================================================================================
+Q2: How many times can a student retake a failed exam?
+
+Top 4 retrieved chunks:
+  [1] source=student_handbook.txt | chunk_id=0 | score=0.5080
+       Course registration is open during the first two weeks of the semester. Students may retake failed exams once.…
+  [2] source=it_support.txt | chunk_id=0 | score=0.3025
+       If your university account password is forgotten, use the password reset portal. IT support is available Monda…
+  [3] source=knowledge.txt | chunk_id=0 | score=0.1032
+       Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of…
+  [4] source=knowledge.txt | chunk_id=1 | score=0.0559
+       It covers more than 30% of the planet’s surface.…
+
+── Constructed prompt ──────────────────────────────────────────────────────
+You are a helpful assistant answering questions using only the provided context.
+
+Rules:
+1. Use only the information from the context.
+2. If the answer is not in the context, say: "There is no information available in the provided context."
+3. Keep the answer clear and concise.
+4. Mention the source file when possible.
+
+Context:
+[Source 1: student_handbook.txt, chunk 0]
+Course registration is open during the first two weeks of the semester. Students may retake failed exams once. The university library is open from 08:00 until 22:00 every day. Final grades are published in the student portal.
+
+[Source 2: it_support.txt, chunk 0]
+If your university account password is forgotten, use the password reset portal. IT support is available Monday to Friday from 09:00 to 18:00. Students should report hardware issues using the online support system. Software installation requests require administrator approval.
+
+[Source 3: knowledge.txt, chunk 0]
+Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of water a day is essential for survival, and lightning never strikes the same place twice. Mount Everest is the tallest mountain on Earth. Its peak is 8848 meters above sea level and it is part of the Himalayas. The Amazon rainforest is the largest tropical rainforest in the world. It spans multiple countries in South America and contains immense biodiversity. The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the planet’s surface.
+
+[Source 4: knowledge.txt, chunk 1]
+It covers more than 30% of the planet’s surface.
+
+Question:
+How many times can a student retake a failed exam?
+
+Answer:
+────────────────────────────────────────────────────────────────────────────
+
+LLM Answer (llama-3.3-70b-versatile):
+A student may retake a failed exam once. (Source: student_handbook.txt, chunk 0)
+
+
+================================================================================
+Q3: What are the library opening hours?
+
+Top 4 retrieved chunks:
+  [1] source=student_handbook.txt | chunk_id=0 | score=0.5699
+       Course registration is open during the first two weeks of the semester. Students may retake failed exams once.…
+  [2] source=it_support.txt | chunk_id=0 | score=0.2402
+       If your university account password is forgotten, use the password reset portal. IT support is available Monda…
+  [3] source=knowledge.txt | chunk_id=1 | score=0.1078
+       It covers more than 30% of the planet’s surface.…
+  [4] source=knowledge.txt | chunk_id=0 | score=0.0992
+       Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of…
+
+── Constructed prompt ──────────────────────────────────────────────────────
+You are a helpful assistant answering questions using only the provided context.
+
+Rules:
+1. Use only the information from the context.
+2. If the answer is not in the context, say: "There is no information available in the provided context."
+3. Keep the answer clear and concise.
+4. Mention the source file when possible.
+
+Context:
+[Source 1: student_handbook.txt, chunk 0]
+Course registration is open during the first two weeks of the semester. Students may retake failed exams once. The university library is open from 08:00 until 22:00 every day. Final grades are published in the student portal.
+
+[Source 2: it_support.txt, chunk 0]
+If your university account password is forgotten, use the password reset portal. IT support is available Monday to Friday from 09:00 to 18:00. Students should report hardware issues using the online support system. Software installation requests require administrator approval.
+
+[Source 3: knowledge.txt, chunk 1]
+It covers more than 30% of the planet’s surface.
+
+[Source 4: knowledge.txt, chunk 0]
+Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of water a day is essential for survival, and lightning never strikes the same place twice. Mount Everest is the tallest mountain on Earth. Its peak is 8848 meters above sea level and it is part of the Himalayas. The Amazon rainforest is the largest tropical rainforest in the world. It spans multiple countries in South America and contains immense biodiversity. The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the planet’s surface.
+
+Question:
+What are the library opening hours?
+
+Answer:
+────────────────────────────────────────────────────────────────────────────
+
+LLM Answer (llama-3.3-70b-versatile):
+The university library is open from 08:00 until 22:00 every day (Source 1: student_handbook.txt).
+
+
+================================================================================
+Q4: What is the capital city of Australia?
+
+Top 4 retrieved chunks:
+  [1] source=knowledge.txt | chunk_id=0 | score=0.2472
+       Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of…
+  [2] source=knowledge.txt | chunk_id=1 | score=0.1609
+       It covers more than 30% of the planet’s surface.…
+  [3] source=it_support.txt | chunk_id=0 | score=0.0228
+       If your university account password is forgotten, use the password reset portal. IT support is available Monda…
+  [4] source=student_handbook.txt | chunk_id=0 | score=0.0202
+       Course registration is open during the first two weeks of the semester. Students may retake failed exams once.…
+
+── Constructed prompt ──────────────────────────────────────────────────────
+You are a helpful assistant answering questions using only the provided context.
+
+Rules:
+1. Use only the information from the context.
+2. If the answer is not in the context, say: "There is no information available in the provided context."
+3. Keep the answer clear and concise.
+4. Mention the source file when possible.
+
+Context:
+[Source 1: knowledge.txt, chunk 0]
+Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of water a day is essential for survival, and lightning never strikes the same place twice. Mount Everest is the tallest mountain on Earth. Its peak is 8848 meters above sea level and it is part of the Himalayas. The Amazon rainforest is the largest tropical rainforest in the world. It spans multiple countries in South America and contains immense biodiversity. The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the planet’s surface.
+
+[Source 2: knowledge.txt, chunk 1]
+It covers more than 30% of the planet’s surface.
+
+[Source 3: it_support.txt, chunk 0]
+If your university account password is forgotten, use the password reset portal. IT support is available Monday to Friday from 09:00 to 18:00. Students should report hardware issues using the online support system. Software installation requests require administrator approval.
+
+[Source 4: student_handbook.txt, chunk 0]
+Course registration is open during the first two weeks of the semester. Students may retake failed exams once. The university library is open from 08:00 until 22:00 every day. Final grades are published in the student portal.
+
+Question:
+What is the capital city of Australia?
+
+Answer:
+────────────────────────────────────────────────────────────────────────────
+
+LLM Answer (llama-3.3-70b-versatile):
+There is no information available in the provided context.
+
+
+================================================================================
+Q5: როდის არის უნივერსიტეტის ბიბლიოთეკა ღია?
+
+Top 4 retrieved chunks:
+  [1] source=student_handbook.txt | chunk_id=0 | score=0.6544
+       Course registration is open during the first two weeks of the semester. Students may retake failed exams once.…
+  [2] source=it_support.txt | chunk_id=0 | score=0.3674
+       If your university account password is forgotten, use the password reset portal. IT support is available Monda…
+  [3] source=knowledge.txt | chunk_id=0 | score=0.1062
+       Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of…
+  [4] source=knowledge.txt | chunk_id=1 | score=0.1043
+       It covers more than 30% of the planet’s surface.…
+
+── Constructed prompt ──────────────────────────────────────────────────────
+You are a helpful assistant answering questions using only the provided context.
+
+Rules:
+1. Use only the information from the context.
+2. If the answer is not in the context, say: "There is no information available in the provided context."
+3. Keep the answer clear and concise.
+4. Mention the source file when possible.
+
+Context:
+[Source 1: student_handbook.txt, chunk 0]
+Course registration is open during the first two weeks of the semester. Students may retake failed exams once. The university library is open from 08:00 until 22:00 every day. Final grades are published in the student portal.
+
+[Source 2: it_support.txt, chunk 0]
+If your university account password is forgotten, use the password reset portal. IT support is available Monday to Friday from 09:00 to 18:00. Students should report hardware issues using the online support system. Software installation requests require administrator approval.
+
+[Source 3: knowledge.txt, chunk 0]
+Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of water a day is essential for survival, and lightning never strikes the same place twice. Mount Everest is the tallest mountain on Earth. Its peak is 8848 meters above sea level and it is part of the Himalayas. The Amazon rainforest is the largest tropical rainforest in the world. It spans multiple countries in South America and contains immense biodiversity. The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the planet’s surface.
+
+[Source 4: knowledge.txt, chunk 1]
+It covers more than 30% of the planet’s surface.
+
+Question:
+როდის არის უნივერსიტეტის ბიბლიოთეკა ღია?
+
+Answer:
+────────────────────────────────────────────────────────────────────────────
+
+LLM Answer (llama-3.3-70b-versatile):
+უნივერსიტეტის ბიბლიოთეკა ღიაა 08:00-დან 22:00 საათამდე, ყველა დღე. (წყარო: student_handbook.txt, chunk 0)
+
+
+================================================================================
+INTERACTIVE MODE DEMO (Improvement 4.4)
+================================================================================
+Simulated input: "Where are final grades published?"
+
+Ask a question, or type 'exit': Where are final grades published?
+
+Top 4 retrieved chunks:
+  [1] source=student_handbook.txt | chunk_id=0 | score=0.4125
+       Course registration is open during the first two weeks of the semester. Students may retake failed exams once.…
+  [2] source=knowledge.txt | chunk_id=1 | score=0.1081
+       It covers more than 30% of the planet’s surface.…
+  [3] source=it_support.txt | chunk_id=0 | score=0.0896
+       If your university account password is forgotten, use the password reset portal. IT support is available Monda…
+  [4] source=knowledge.txt | chunk_id=0 | score=0.0567
+       Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of…
+
+── Constructed prompt ──────────────────────────────────────────────────────
+You are a helpful assistant answering questions using only the provided context.
+
+Rules:
+1. Use only the information from the context.
+2. If the answer is not in the context, say: "There is no information available in the provided context."
+3. Keep the answer clear and concise.
+4. Mention the source file when possible.
+
+Context:
+[Source 1: student_handbook.txt, chunk 0]
+Course registration is open during the first two weeks of the semester. Students may retake failed exams once. The university library is open from 08:00 until 22:00 every day. Final grades are published in the student portal.
+
+[Source 2: knowledge.txt, chunk 1]
+It covers more than 30% of the planet’s surface.
+
+[Source 3: it_support.txt, chunk 0]
+If your university account password is forgotten, use the password reset portal. IT support is available Monday to Friday from 09:00 to 18:00. Students should report hardware issues using the online support system. Software installation requests require administrator approval.
+
+[Source 4: knowledge.txt, chunk 0]
+Humans only use 2% of their brains, the Great Wall of China is visible from the Moon, drinking eight liters of water a day is essential for survival, and lightning never strikes the same place twice. Mount Everest is the tallest mountain on Earth. Its peak is 8848 meters above sea level and it is part of the Himalayas. The Amazon rainforest is the largest tropical rainforest in the world. It spans multiple countries in South America and contains immense biodiversity. The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the planet’s surface.
+
+Question:
+Where are final grades published?
+
+Answer:
+────────────────────────────────────────────────────────────────────────────
+
+LLM Answer (llama-3.3-70b-versatile):
+Final grades are published in the student portal. (Source: student_handbook.txt, chunk 0)
+
+Exiting interactive mode.
